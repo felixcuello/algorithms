@@ -21,9 +21,9 @@ def all_permutations(string, current = '', used = 0)
   end
 
   sl.times do |i|
-    if used & (1 << i) == 0 # This letter wasn't used
-      all_permutations(string, current + string[i], used | (1 << i))
-    end
+    next if used & (1 << i) != 0 # This letter was used already
+
+    all_permutations(string, current + string[i], used | (1 << i))
   end
 end
 
