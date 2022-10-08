@@ -8,11 +8,14 @@ all:
 build:
 	@g++ -std=c++0x -O2 -Wall -g $(PROBLEM).cc -o $(PROBLEM)
 
+build_debug:
+	@g++ -std=c++0x -DDEBUG -O2 -Wall -g $(PROBLEM).cc -o $(PROBLEM)
+
 run: build
 	./$(PROBLEM) < $(PROBLEM).in > $(PROBLEM).out
 
-debug: build
-	@gdb ./$(PROBLEM) < $(PROBLEM).in
+debug: build_debug
+	@./$(PROBLEM) < $(PROBLEM).in
 
 clean:
 	@rm -rf $(PROBLEM) $(PROBLEM).out $(PROBLEM).dSYM
