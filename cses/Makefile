@@ -27,3 +27,7 @@ create:
 install_std:
 	sudo mkdir -p /Library/Developer/CommandLineTools/usr/include/bits/
 	sudo cp stdc++.h /Library/Developer/CommandLineTools/usr/include/bits/
+
+
+# THIS is to install xcode [thanks Monterrey for breaking my mac]
+# xcode-select --install
