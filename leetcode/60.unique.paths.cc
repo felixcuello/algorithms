@@ -3,10 +3,11 @@
 using namespace std;
 
 #define mp(a,b) make_pair(a,b)
+#define ull unsigned long long
 
 class Solution {
   public:
-    int f(int rows, int cols, map<pair<int,int>, int>& dp) {
+    ull f(ull rows, ull cols, map<pair<ull,ull>, ull>& dp) {
       if(rows == 0) return 1;
       if(cols == 0) return 1;
       if(dp.find(mp(rows,cols)) != dp.end()) return dp[mp(rows,cols)];
@@ -15,19 +16,19 @@ class Solution {
       return dp[mp(rows,cols)];
     }
 
-    int uniquePaths(int rows, int cols) {
-      map<pair<int,int>, int> dp;
-      for(int i=0; i<cols; i++) dp[mp(0,i)] = 1;
-      for(int i=0; i<rows; i++) dp[mp(i,0)] = 1;
+    ull uniquePaths(ull rows, ull cols) {
+      map<pair<ull,ull>, ull> dp;
+      for(ull i=0; i<cols; i++) dp[mp(0,i)] = 1;
+      for(ull i=0; i<rows; i++) dp[mp(i,0)] = 1;
 
       f(rows, cols, dp);
       return dp[mp(rows-1,cols-1)];
     }
 };
 
-int main() {
-  int rows; cin >> rows;
-  int cols; cin >> cols;
+ull main() {
+  ull rows; cin >> rows;
+  ull cols; cin >> cols;
 
   Solution* s = new Solution();
   cout << s->uniquePaths(rows, cols) << '\n';
