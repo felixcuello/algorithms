@@ -1,0 +1,16 @@
+abecedario
+14
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+r
+i
+o

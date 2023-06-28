@@ -1,0 +1,12 @@
+abcdefghijklmnopqrstuvwxyz
+10
+ab
+cd
+ef
+gh
+ij
+kl
+mn
+op
+qrstuvw
+xyz
